@@ -25,7 +25,7 @@ spec:
       - name: DockerHub-registry
       containers:
       - name: frontend
-        image: 5464534563/webapp-demo:v17
+        image: 5464534563/webapp-demo:v35
         imagePullPolicy: Always
 #        env:
 #          - name: REACT_APP_BACKEND_URL
