@@ -77,7 +77,7 @@ spec:
     spec:
       containers:
         - name: bankapp
-          image: 5464534563/webapp-demo:2  # Replace with your Docker Hub image
+          image: 5464534563/webapp-demo:v37
           env:
             - name: SPRING_DATASOURCE_URL
               value: "jdbc:mysql://mysql:3306/bankappdb?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC"
