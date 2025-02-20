@@ -57,7 +57,8 @@ spec:
     - protocol: TCP
       port: 3306
       targetPort: 3306
-  clusterIP: None  # Headless service for stable DNS resolution
+  type: ClusterIP  # ✅ Internal service for MySQL
+
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -100,4 +101,5 @@ spec:
     - protocol: TCP
       port: 80
       targetPort: 8080
-  type: LoadBalancer  # Change to NodePort if running locally
+      nodePort: 30008  # ✅ Use a fixed NodePort
+  type: NodePort  # ✅ Works in Minikube
